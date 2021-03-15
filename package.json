@@ -1,0 +1,30 @@
+{
+    "name": "black-monarch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tailwind build src/tailwind.css -o dist/tailwind.css",
+        "seo": "cd excludeconf && node chunk1.js ",
+        "sync": "npm run sitemap && aws s3 sync . s3://familymarketing.us --delete --exclude 'node_modules/*' --exclude 'excludeconf/*' && cd excludeconf && node google.js && node bingurls.js && node axiospost.js",
+        "edit": "aws s3 sync . s3://familymarketing.us --delete --exclude 'node_modules/*' --exclude 'excludeconf/*' && cd excludeconf && node google.js && node bingurls.js && node axiospost.js",
+
+        "syncsingle": "aws s3 sync . s3://familymarketing.us --delete --exclude 'node_modules/*' --exclude 'excludeconf/*'",
+        "urls": "node ./excludeconf/geturls.js && node ./excludeconf/writefoot.js && ./excludeconf/replace.js",
+        "sitemap": "cd excludeconf && node geturls.js && node replace.js && node writesitemap.js",
+        "final": "npm run seo && npm run sync"
+
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.2.0",
+        "axios": "^0.21.1",
+        "googleapis": "^67.1.0",
+        "postcss": "^8.2.2",
+        "replace-in-file": "^6.2.0",
+        "request": "^2.88.2",
+        "tailwindcss": "^2.0.2",
+        "typed.js": "^2.0.11"
+    }
+}

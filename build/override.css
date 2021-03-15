@@ -1,0 +1,204 @@
+@media (max-width: 767px) {
+    .navicon {
+      width: 1.125em;
+      height: .125em;
+    }
+  
+    .navicon::before,
+    .navicon::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: all .2s ease-out;
+      content: '';
+      background: #3D4852;
+    }
+  
+    .navicon::before {
+      top: 5px;
+    }
+  
+    .navicon::after {
+      top: -5px;
+    }
+  
+    .menu-btn:not(:checked) ~ .menu {
+      display: none;
+    }
+  
+    .menu-btn:checked ~ .menu {
+      display: block;
+    }
+  
+    .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+  
+    .menu-btn:checked ~ .menu-icon .navicon::before {
+      transform: rotate(-45deg);
+    }
+  
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+      transform: rotate(45deg);
+    }
+  
+    .menu-btn:checked ~ .menu-icon .navicon::before,
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+      top: 0;
+    }
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 1 !important;
+  }
+  
+  .text-primary {
+    color: #5850ec !important;
+  }
+  
+  .btn-primary {
+    background: #5850ec !important;
+    border: none !important;
+    color: #fff !important;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    box-shadow: none !important;
+    background: #6875f5 !important;
+    color: #fff !important;
+  }
+  
+  .btn-primary:active,
+  .btn-primary.active {
+    box-shadow: none !important;
+    background: #6875f5 !important;
+    color: #fff !important;
+  }
+  
+  .btn-light {
+    background: #fff !important;
+    border: none !important;
+    color: #5145cd !important;
+  }
+  
+  .btn-light:hover,
+  .btn-light:focus {
+    box-shadow: none !important;
+    background: #f2f2f2 !important;
+    color: #5145cd !important;
+  }
+  
+  .btn-light:active,
+  .btn-light.active {
+    box-shadow: none !important;
+    background: #f2f2f2 !important;
+    color: #5145cd !important;
+  }
+
+  .fixed {
+
+    width: 100%;
+    background-color: whitesmoke;
+  }
+
+  .hero {
+
+    height: 50vh;
+
+  }
+
+  .py-20 {
+    padding-top: 8rem !important;
+    padding-bottom: 5rem;
+}
+
+.gradient-border {
+    content: "";
+    background: linear-gradient(60deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
+    -webkit-animation: animatedgradient 3s ease infinite alternate;
+    animation: animatedgradient 3s ease infinite alternate;
+    background-size: 300% 300%;
+}
+
+BODY { background:#FAFAFA; }
+
+  /* #Mega Menu Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+
+
+
+  /* #hoverable Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .hoverable {
+    position: static;
+  }
+
+  .hoverable > a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .hoverable:hover .mega-menu {
+    display: block;
+  }
+
+
+  /* #toggle Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .toggleable > label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .toggle-input {
+    display: none;
+  }
+  .toggle-input:not(checked) ~ .mega-menu {
+    display: none;
+  }
+
+  .toggle-input:checked ~ .mega-menu {
+    display: block;
+  }
+
+  .toggle-input:checked + label {
+    color: white;
+    background: #2c5282; /*@apply bg-blue-800 */
+  }
+
+  .toggle-input:checked ~ label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+     --tw-scale-x: 0 !important; 
+     --tw-scale-y: 0 !important; 
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+  
